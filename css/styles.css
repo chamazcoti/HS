@@ -258,6 +258,7 @@ a:hover {
 }
 .learn-more a {
   color:#0030AD;
+  text-decoration:0;
 }
 .row2 {
   margin-top:-20px;
@@ -286,6 +287,7 @@ margin:0 auto 40px auto;
 .form-style {
   width: 100%;
   border:0;
+  border-radius:0;
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1px solid;
 }
