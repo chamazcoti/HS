@@ -1,0 +1,491 @@
+body {
+    background-color:#F9F7F7;
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+
+}
+
+.container-fluid {
+padding:0;
+}
+  
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size:1.5rem;  
+    font-weight: 700;
+    
+}
+
+h3{
+  color:#8199EE;
+  font-size: 1.25rem;
+}
+
+h4 {
+  color:#0030AD;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+h5{
+  font-size: .825rem;
+  font-weight: bold;
+  color:rgb(73, 72, 72);
+}
+
+p{
+    font-size: .875rem;
+ 
+}
+a {
+    text-decoration: none;
+    font-size: .825rem;
+    color:#000000f1;
+    margin:10px;
+}
+
+a:hover {
+  color:#8199EE;
+  font-weight: bold;
+}
+
+.top-nav {
+  position: fixed;
+  background-color: rgb(248, 247, 249);
+  z-index: 4;
+}
+
+
+/* Navigation bar top */
+.navbar {
+  padding: 1rem;
+  
+}
+
+.navbar-collapse {
+  padding-top:12px;
+}
+
+.navbar-brand{
+  font-size: 2.5rem;
+}
+
+.main-nav {
+  position: fixed;
+  right:2rem;
+  text-align:right;
+  background-color: #F2F0F0;
+  width:40%;
+  margin-right:-16px;
+  padding: 12px 0;
+  border-radius: 4px;
+}
+
+.nav-item {
+  padding: 0 8px;
+
+}
+
+.nav-link {
+  font-size:.825rem;
+  color: #000 !important;
+}
+
+.nav-link:hover {
+  color:#8199EE !important;
+  font-weight: bold;
+}
+.nav-link:active {
+    color: #FF6D03 !important;
+    font-weight: bold;
+}
+
+.navbar-brand img{
+  display: none;
+}
+
+.second-nav {
+  visibility: hidden;
+  width:12%;
+  position: fixed;
+  padding-top:250px;
+}
+
+.second-nav .nav-item {
+  padding-bottom: 32px;
+  margin-left:40px;
+}
+
+/* first page content */
+.main-title {
+  margin: 65% auto 10%;
+  padding: 0 11%;
+}
+.description h3 {
+  padding-top: 50px;
+  padding-bottom: 1rem;
+}
+.description {
+  margin-top:50px;
+  line-height: 1.75;
+}
+
+/* Right Projects Navigation */
+
+.vertical-nav {
+  list-style: none;
+  visibility: hidden;
+}
+
+.cd-nav-trigger {
+  display: none;
+}
+
+#cd-vertical-nav{
+  position: fixed;
+  right: 60px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  z-index: 1;
+}
+
+#cd-vertical-nav li {
+  text-align: right;
+  margin-bottom: -16px;
+}
+
+#cd-vertical-nav a {
+  display: inline-block;
+  /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#cd-vertical-nav a:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#cd-vertical-nav a span {
+  /* float:right; */
+  display: inline-block;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+}
+#cd-vertical-nav a:hover span {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+#cd-vertical-nav a:hover .cd-label {
+  opacity: 1;
+}
+
+#cd-vertical-nav a.is-selected .cd-dot {
+  background-color: white;
+}
+#cd-vertical-nav .cd-dot {
+  position: relative;
+  /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
+  left: 1rem;
+  top: 8px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+  -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+  -moz-transition: -moz-transform 0.2s, background-color 0.5s;
+  transition: transform 0.2s, background-color 0.5s;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+#cd-vertical-nav .cd-label {
+  position: relative;
+  margin-right: 10px;
+  padding: .25 em .5em;
+  color:#0030AD;
+  font-size: 1rem;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
+  opacity: 0;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+/* Portfolio Section Style */
+.works {
+  padding-top: 90px;
+  padding-bottom: 80px;
+  padding-left: 8%;
+}
+.project-card {
+  padding: 0 5%;
+  width: 80%;
+  margin: 0 auto;
+}
+.client-name {
+  padding-top:20px;
+}
+.long-text {
+  visibility: hidden;
+}
+
+.card-text{
+  height: 30%;
+}
+.learn-more {
+  text-align: right;
+}
+.learn-more a {
+  color:#0030AD;
+}
+.row2 {
+  margin-top:-20px;
+}
+
+/* contact me section */
+.form-title {
+  text-align: left;
+  margin-left:8%;
+}
+.contact {
+  padding-top:90px;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+}
+.subtext {
+  font-style: italic;
+  margin:-15px auto 80px;
+}
+
+.contact-form {
+width: 80%;
+margin:0 auto 40px auto;
+}
+
+.form-style {
+  width: 100%;
+  border:0;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1px solid;
+}
+
+.form-label {
+  width: 100%;
+  padding-bottom: -20px;
+  font-size: .825rem;
+  color: #A9A8A8;
+  text-align: left;
+}
+
+.submit-btn {
+  text-align: center;
+}
+.btn-outline-dark {
+  border-color:#0030AD;
+  color:#0030AD;
+  margin: 10% auto 30% auto;
+}
+
+/* Media Sizes */
+@media only screen and (min-width: 768px) { 
+
+  .container-fluid {
+      padding: 2% 3%;
+    }
+  .row {
+      margin-right: 0;
+    }
+
+  h1 {
+    font-size:2.5rem;
+  }
+
+  .main-nav {
+    width:20%;
+    margin:5px;
+    padding: 12px 0;
+  
+  }
+  .main-title {
+      margin:30% auto 8%;
+      left:-60px;
+    }
+  .works {
+      padding-bottom: 80px;
+      padding-left: 10%;
+  }
+  .project-card {
+    padding: 0 12%;
+  }
+  .form-title {
+    margin-left: 10%;
+  }
+
+  .contact-form {
+    width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1024px) { 
+
+  .container-fluid {
+    padding: 1%;
+  }
+  .row {
+    margin-right: 0;
+  }
+
+  h1 {
+    font-size:2.75rem;
+  } 
+  .main-nav {
+    right:9%;
+    text-align:right;
+    background-color:#F9F7F7;
+    width:30%;
+    
+  }
+
+  .main-title {
+    margin-top: 26%;
+    left:3%;
+  }
+
+  .second-nav {
+    visibility: visible;
+    width:12%;
+    position: fixed;
+    padding-top:250px;
+  }
+
+  .works {
+    padding-bottom: 80px;
+    padding-left: 21%;
+
+}
+.projects-row {
+  margin-left:10%;
+}
+
+.project-card {
+  padding:0;
+  padding-right:3%;
+  margin-left:15%;
+} 
+
+.form-title {
+  margin-left: 10%;
+}
+.contact-section {
+  margin-left:12%;
+}
+.contact-form {
+  width: 50%;
+  margin-left: 30%;
+  }
+.submit-btn {
+  text-align: right;
+}
+}
+
+@media only screen and (min-width: 1440px) { 
+
+  .container-fluid {
+    padding: 1%;
+  }
+  .row {
+    margin-right: 0;
+  }
+
+  h1 {
+    font-size: 3.25rem;
+  }
+
+  .main-nav {
+    right:4%;
+    text-align:right;
+    background-color:#F9F7F7;
+    width:25%;
+    
+  }
+
+  .main-title {
+    margin-top: 21%;
+    margin-left:4%;
+  }
+
+  .description {
+    margin-top: 120px;
+    line-height: 1.5;
+    width: 85%;
+}
+  .second-nav {
+    visibility: visible;
+    width:12%;
+    position: fixed;
+    padding-top:300px;
+    z-index: 4;
+  }
+
+  /* .vertical-nav {
+    visibility: visible;
+  }
+  .cd-nav-trigger {
+    visibility: visible;
+  } */
+  
+
+.works {
+  padding-top:90px;
+  padding-bottom: 120px;
+  padding-left: 17%;
+
+}
+.long-text {
+  visibility: visible;
+}
+.projects-row {
+  margin-left:8%;
+}
+.project-card {
+  margin:0;
+  padding-left: 10%;
+  margin-bottom: 7%;
+} 
+.card-text{
+  height: 50%;
+}
+
+.form-title {
+  margin-left: 6%;
+}
+
+.contact-form {
+  width: 40%;
+  margin-left: 20%;
+  }
+.submit-btn {
+  text-align: right;
+}
+}
